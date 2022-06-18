@@ -1,11 +1,15 @@
-
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * This program acts as a console application to manage employees (Employee Management System). The user and add, remove, modify,
+ * and view employees in the system.
+ * @author tojum
+ *
+ */
+//driver method that will run the menu
 public class Main {
 	static Employee employee = new Employee();
 	static Scanner kb = new Scanner(System.in);
@@ -34,6 +38,7 @@ public class Main {
 //			e.printStackTrace();
 //		}
 	}
+	//method that will display the menu
 	public static void menu() {
 		String selection = null;
 //		Employee employee = new Employee();
@@ -55,6 +60,7 @@ public class Main {
 			}			
 		} while (!selection.equalsIgnoreCase("Q"));
 	}
+	//runs when an employee needs to be added to the system
 	public static void addEmployeePrompt() {
 		String firstName;
 		String lastName;
@@ -98,6 +104,7 @@ public class Main {
 		department = kb.nextLine();
 		employee.addEmployee(firstName, lastName, id, dateDOE, salary, department);
 	}
+	//runs when an employee needs to be removed from the system
 	public static void removeEmployeePrompt() {
 		System.out.println("Which employee would you like to remove? Type the number");
 		employee.displayEmployees();
@@ -105,6 +112,7 @@ public class Main {
 		kb.nextLine();
 		employee.removeEmployees(number);
 	}
+	//runs when employee information needs to be updated
 	public static void updateEmployeeInfoPrompt() {
 		String firstName;
 		String lastName;

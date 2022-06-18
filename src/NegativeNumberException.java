@@ -1,4 +1,8 @@
-
+/**
+ * custom exception class
+ * @author tojum
+ *
+ */
 
 public class NegativeNumberException extends Exception {
 	
